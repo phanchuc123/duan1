@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Inline Event</title>
+</head>
+<body>
+    <h1>Hoc Inline Event</h1>
+    <!-- onclick -->
+    <button onclick="alert(`Ban da nhap vao nut`)">Click</button>
+    <button onclick="alert(`Ban da nhap vao nut`);alert(`thong bao 2`)">Click</button>
+    <!-- ondblclick -->
+    <button ondblclick="alert(`Ban da nhap dup chuot vao nut`)">Double Click me</button>
+
+    <!-- onmouseover : khi di chuyen chuot qua doi tuong se thuc hien su kien -->
+    <!-- onmouseleave : khi di chuyen chuot khoi doi tuong se thuc hien su kien -->
+    <div onmouseover="this.style.backgroundColor=`yellow`"
+         onmouseleave="this.parentElement.style.backgroundColor=`green`">
+        Di chuyen con chuot vao day
+    </div>
+    <!-- onkeypress -->
+    <input type = "text" onkeypress="alert(`Ban da nhap vao mot ky tu`)">
+</body>
+</html>

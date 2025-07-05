@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>fLogin</title>
+</head>
+<body>
+    <style>
+    body, html {
+      height: 100%;
+      margin: 0;
+      font-family: Arial, sans-serif;
+      background-image: url("anh.jpg");
+      background-size: cover;
+      background-position: center;
+      background-repeat: no-repeat;
+      display: flex;
+      /* căn ngang  */
+      justify-content: center;
+      /* justify-content: flex-start : bên trái
+         justify-content: flex-end : ben phải
+         align-items: flex-end : đáy màn hình */
+       /*căn dọc  */
+      align-items: center;
+    }
+    .login-container {
+        width: 500px;
+        background-color: rgba(255, 255, 255, 0.8);
+        padding: 20px;
+        border-radius: 30px;
+        width: 300px;
+        box-shadow: 0 10px 25px rgba(0, 168, 3, 0.5);
+        text-align: center;
+    }
+    .form-infor input {
+        margin: 5px;
+        border-radius: 5px;
+    }
+    .btn-login {
+        border: none;
+        background:blue;
+        color : while;
+        padding: 5px 10px; 
+        cursor: pointer;
+        transition: background 0.5s;
+        border-radius: 5px ;
+    }
+    .btn-login:hover {
+        background: green;
+    }
+    .btn-reset{
+        border: none;
+        background: red;
+        color : white;
+        padding: 5px 10px; 
+        cursor: pointer;
+        border-radius: 5px ;
+    }
+    </style>
+
+    <div class = "login-container">
+       <h1>Login</h1>
+       <form>
+           <div class = "form-infor">
+                <label for="user">UserName</label>
+                <input type = "text" id = "user" name = "user" required>
+                <br>
+                <label for ="password">PassWord</label>
+                <input type = "Password" id = "password" name ="password" required>
+            </div>
+           <br>
+           <div class = "form-btn">
+                <button class="btn-login" type ="submit">Login</button>
+                <button class="btn-reset" type ="reset">Reset</button>
+           </div>
+       </form>
+    </div>
+</body>
+</html>

@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <form action="./login" id = "login">
+         <input type = "text" placeholder="Enter your name">
+         <input type = "password" name ="" id ="">
+         <button type = "submit">Login</button>
+    </form>
+
+    <script>
+        const form = document.getElementById("login");
+        form.addEventListener("submit", function(e){
+            e.preventDefault(); // Ngăn chặn hành động mặc định của form (gửi dữ liệu)
+            alert("Form submitted!"); // Hiển thị thông báo khi form được submit
+            // Bạn có thể thêm logic xử lý khác ở đây
+        })
+    </script>
+</body>
+</html>

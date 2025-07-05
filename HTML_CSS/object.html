@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Object</title>
+</head>
+<body>
+    <script>
+        let student = {
+            fullname: "Tran van A",
+            birthYear: 2005,
+            address:{
+                 city:"Ha Noi",
+                 country:"Viet Nam",
+            },
+            scores: [8,9,10],
+            // phuong thuc
+            getAge : function(){
+                return 2024 - this.birthYear;
+            },
+            diemtrungbinh : function(){
+                sum = this.scores.reduce((a,b) =>a+b,0);
+                return sum/3; 
+            }
+        };
+    </script>
+</body>
+</html>

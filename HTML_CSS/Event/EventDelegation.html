@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Bai hoc Event Delegation</h1>
+    <form action="" id = "form">
+        <input type="text" name="" id = "username" placeholder="Username">
+        <input type="text" placeholder="message" id = "message">
+        <input type="submit" value="Send">
+    </form>
+    <ul id = "list_item">
+        <li>Tin Nhan 1</li>
+        <li>Tin Nhan 2</li>
+        <p>Doan van ban</p>
+    </ul>
+
+    <script>
+        const form  = document.querySelector("#form");
+        const list_item = document.querySelector("#list_item");
+        form.addEventListener("submit",function(e){
+            e.preventDefault();
+            // Lấy giá trị của ô username và message
+            const username = document.getElementById("username").value;
+            const message = document.getElementById("message").value;
+            // Tạo thẻ li mới
+            const newLi = document.createElement("li");
+            newLi.textContent = username + ": " + message;
+            // Thêm thẻ li mới vào ul
+            list_item.append(newLi);
+            // resert form
+            form.reset();
+        });
+        // chon tất cả các thẻ li trong ul
+        const lists = document.querySelectorAll("#list_item li");
+        // duyet qua từng thẻ li
+        // for(let li  of lists){
+        //     // lắng sự kiện click cho từng thẻ li
+        //     li.addEventListener("click", function(e){
+        //         // khi click vào thẻ li thì sẽ xóa nó
+        //         li.remove();
+        //     });
+        // }
+
+        // Cách bước thực hiện Event Delegation (sự kiện giao phó từ cha xuống con):
+        // 1. Thêm sự kiện vào phân tử cha (ví dụ: ul)
+        // 2. Kiểm tra xem phần tử nào xảy ra sự kiện (e.target)
+        // 3. Thực hiện công việc cần thiết 
+        //Lắng nghe sự kiện click cho ul (thẻ cha)
+        list_item.addEventListener("click",function(e){
+            const li = e.target; // Lấy phần tử được click
+            if(li.tagName ==="LI"){
+                li.remove();
+            }
+            });
+    </script>
+</body>
+</html>

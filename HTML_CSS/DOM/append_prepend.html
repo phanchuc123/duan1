@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <style>
+        .container{
+            background-color: aqua;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+        }
+    </style>
+    <div class="container">
+        <p>Phan tu cu</p>
+    </div>
+
+    <script>
+        let container = document.querySelector(".container");
+        let lastdiv = document.createElement("div");
+        lastdiv.textContent = "Phan tu moi";
+        lastdiv.style.color = "red";
+        // append() : thêm phần tử hoặc văn bản vào cuối của phần tử cha, thêm 1 hoặc nhiều phần tử cùng 1 lúc
+        container.append(lastdiv);
+        let eleP = document.createElement("p");
+        eleP.textContent = "Xin chhao";
+        container.append(eleP);
+        eleP.innerHTML = "<strong>phan long chuc</strong>";
+        container.append("XIN CHAO MM^^");
+        // appendChild(): chỉ thêm được 1 phần tử trong 1 lần gọi (không thêm được văn bản)
+        let l1 = document.createElement("h2");
+        l1.setAttribute("id","l1");
+        l1.textContent = "Hello World";
+        container.appendChild(l1);
+
+        // prepend() : thêm phần tử hoặc văn bản vào đầu của phần tử cha
+        let firstdiv = document.createElement("div");
+        firstdiv.textContent = "helo";
+        firstdiv.style.fontSize = "30px";
+        container.prepend(firstdiv);
+        
+        let item1 = document.createElement("h1");
+        item1.textContent = "day la the h1";
+        item1.setAttribute("class","item");
+        let item2 = document.createElement("span");
+        item2.textContent = "day la the span";
+        container.prepend(item1,item2,"Da thay vao container");
+
+        let btn = document.createElement("button");
+        btn.textContent = "Click đi cưng";
+        btn.style.padding = "10px 20px";         
+        btn.style.backgroundColor = "#00bcd4";   
+        btn.style.color = "white";              
+        btn.style.fontSize = "16px";             
+        btn.style.border = "none";              
+        btn.style.borderRadius = "8px";         
+        btn.style.cursor = "pointer";           
+        btn.style.boxShadow = "0 4px 6px rgba(0,0,0,0.2)"; 
+        container.appendChild(btn);
+        btn.addEventListener("click",function(){
+            btn.setAttribute("class","btn");
+            alert("May click dk");
+        })
+
+    </script>
+</body>
+</html>

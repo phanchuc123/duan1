@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <style>
+        body{
+            display:flex;
+            justify-content: center;
+            align-items: center;
+            flex-flow: column;
+        }
+    </style>
+    <!-- addEventListener: sử dụng để gọi Function khi mà sự kiện được
+     chỉ định xảy ra
+     element.addEventListener(event,func,options)
+     element: phần tử muốn thêm sự kiện
+     event: tên sự kiên
+     func: hàm xử lý sự kiện
+     options: tùy chọn -->
+    <h2>addEventListener</h2>
+    <button id="btn">Button</button>
+    <button id="btn1">Button1</button>
+    <h1 id = "title">HI RANDOM COLOR</h1>
+    <button id="btn2">Change color</button>
+
+    <script>
+        const button = document.getElementById("btn");
+        button.addEventListener("click",function(){
+            alert("Button clicked!");
+        });
+        const button1 = document.getElementById("btn1");
+        button1.addEventListener("click",()=>{
+            alert("Button1 clicked!");
+        });
+        function mouseOver(){
+            alert("Mouse over Button1!");
+        }
+        function mouseOut(){
+            alert("Mouse out Button1!");
+        }
+        button1.addEventListener("mouseover",mouseOver,{once:true}); // once: true chỉ cho phép sự kiện xảy ra một lần
+        button1.addEventListener("mouseout",mouseOut);
+        // removeEventListener: sử dụng để xóa sự kiện đã đăng ký
+        // element.removeEventListener(event,func,options)
+        // options: phải giống với options đã đăng ký sự kiện
+        // nếu không sẽ không xóa được sự kiện
+        button1.removeEventListener("mouseover",mouseOver);
+        const button2 = document.querySelector("#btn2");
+        button2.addEventListener("click",()=>{
+            const r = Math.floor(Math.random()*256);
+            const g = Math.floor(Math.random()*256);
+            const b = Math.floor(Math.random()*256);
+            const colorCode = `rgb(${r},${g},${b})`;
+            document.body.style.backgroundColor = `${colorCode}`;
+
+            const h1 = document.getElementById("title");
+            h1.textContent = colorCode;
+        });
+    </script>
+
+</body>
+</html>

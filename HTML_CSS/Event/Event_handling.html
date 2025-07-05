@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <!-- alt shift xuống -->
+    <!-- DOM level 0 event handling là phương pháp bắt sự kiện bằng cách
+         gán trực tiếp một hàm js cho 1 thuộc tính sự kiện của phần tử HTML -->
+    <h2>Event Handling</h2>
+    <button id = "btn">Click</button>
+    <button id = "btn1">On Mouse Over</button>
+    <button id = "btn2">Double Click</button>
+    <button id = "button">Button</button>
+    <p id = "message"></p>
+    <script>
+        // sử dụng function expression
+        const button1 = document.getElementById("btn");
+        button1.onclick = function(){
+            alert("Button 1 clicked!");
+        }
+        // sử dụng function declaration
+        const button2 = document.getElementById("btn2");
+        function show(){
+            alert("Double clicked button2!");
+        }
+        button2.ondblclick = show;
+        // sử dụng arrow function
+        const button3 = document.getElementById("btn1");
+        button3.onmouseover = () =>{
+            alert("Mouse over Button 3!");
+        }
+        function mouseOver(){
+            document.getElementById("message").textContent = "Mouse over Button 4!";  
+        }
+        function mouseOut(){
+            document.getElementById("message").textContent = "Mouse out Button 4!";
+        }
+        function setup(){
+            var button = document.getElementById("button");
+            button.onmouseover = mouseOver;
+            button.onmouseout = mouseOut;
+        }
+        
+        setup();
+    </script>
+</body>
+</html>

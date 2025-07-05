@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <!-- Tieu de tu lon den nho -->
+    <h1>Welcom</h1>
+    <h2>to the second page</h2>
+    <h3>chuc</h3>
+    <h4>mung</h4>
+    <h5>ban</h5>
+    <h6>toi</h6>
+    <!-- doan nho -->
+    <p>This is a paragraph on the second page.</p>
+    <!-- xuong dong -->
+    <br>
+    <!-- chu nghieng -->
+    <i>Phan Long Chức</i>
+    <br>
+    <!-- chu gach chan -->
+    <u>Xin chao the gioi</u>
+    <!-- xuong hang ganh ngang -->
+    <hr>
+    <!-- chu in dam bold -->
+    <b>Helo</b>
+    <br>
+    <!-- lien ket den trang khac -->
+    <a href="index.html">Go back to the first page</a>
+    <br>
+    <!-- Hien thi hinh anh -->
+    <img src="link anh" alt="Mo ta">
+
+    <!-- danh sach khong co thu tu-->
+     <ul>
+        <li>Item 1</li>
+        <li>Item 2</li>
+        <li>Item 3</li>
+        <li>Item 4</li>
+        <li>Item 5</li>
+     </ul>
+
+    <!-- danh sach co thu tu -->
+    <ol type ="I">
+        <li>First Item</li>
+        <li>Second Item</li>
+        <li>Third Item</li>
+        <li>Fourth Item</li>
+        <li>Fifth Item</li>
+    </ol>
+    <!-- bang -->
+     <table border="1">
+        <tr>
+            <th>Header 1</th>
+            <th>Header 2</th>
+            <th>Header 3</th>
+        </tr>
+        <tr>
+            <td>Row 1, Cell 1</td>
+            <td>Row 1, Cell 2</td>
+            <td>Row 1, Cell 3</td>
+        </tr>
+        <tr>
+            <td>Row 2, Cell 1</td>
+            <td>Row 2, Cell 2</td>
+            <td>Row 2, Cell 3</td>
+        </tr>
+     </table>
+
+     <!-- bieu mau -->
+        <form action="/submit" method="post">
+            <label for="name">Name:</label>
+            <input type="text" id="name" name="name" required>
+            <br>
+            <label for="email">Email:</label>
+            <input type="email" id="email" name="email" required>
+            <br>
+            <button type="submit">Submit</button>
+        </form>
+
+        <!-- cac thanh phan -->
+           <!-- label , input -->
+              <!--gia tri cua name va id trong input khong nhat thiet phai giong nhau  -->
+              <!-- gia tri cua name phai giong voi ten truong trong CSDLCSDL-->
+               <!-- id là định danh duy nhất của thành phần
+                    name là tên trường dữ liệu sẽ gửi về serverserver -->
+           <!-- gia tri cua for trong label phai giong voi gia tri cua id trong input, không cần phải giống với namename -->
+            <h1>Đăng nhập</h1>
+            <label for = "hoten">Họ và tên : </label>
+            <input type ="text" id = "hoten" name = "hoten" value="">
+            <br>
+            <label for = "pass" >Mật khẩu :</label>
+            <input type ="Password" id ="pass" name = "Password">
+            <br>
+            <input type = "radio" id ="nam" name = "gender" value = "Nam">
+            <input type = "radio" id ="nu" name = "gender" value = "Nữ">
+
+            <input type = "checkbox" id = "check" name = "check" value = "check">
+            
+            <br>
+            <label for ="number">Số lượng :</label>
+            <input type = "number" id = "number" name = "number" value ="">
+
+            <input type = "file" id = "file" name = "file">
+            
+            <input type ="submit" value = "Gửi">
+            <input type = "reset" value = "Làm lại">
+
+            <!-- button -->
+             <button type ="submit">Submit</button>
+             <button type = "reset">Reset</button>
+             <button type = "button" onclick="alert('Button clicked!')">Click Me</button>
+             <br>
+             <!-- Combobox (select box) -->
+             <label for = "chon">Menu</label>
+             <select id = "chon" name="chon">
+                <option value = "hanoi">Hà nội</option>
+                <option value = "hcm">Hồ chí minh</option>
+                <option value = "danang">Đà nẵng</option>
+             </select>
+
+             <br>
+             <label for="chon1">Chon di cu</label>
+             <select multiple>
+                <option value ="1">1</option>
+                <option value ="2">2</option>
+                <option value ="3">3</option>
+             </select>
+
+             <!-- div -->
+            <div class = "container">
+                <div class ="login">
+                   <h1>Login</h1>
+                   <form>
+                        <label for = "username">Username</label>
+                        <input type = "text" id ="username" name = "username">
+                        <br>
+                        <label for = "password">PassWord</label>
+                        <input type = "Password" id = "pass" name = "pass">
+                    </form>
+                </div>
+                <div class = "hello"> Hello word</div>
+            </div>
+
+            <!-- css -->
+            <style>
+             .container{
+                 /* hien thi ngang */
+                display:flex;
+                /* khoang canh giua hai div */
+                gap: 50px; 
+                background-color: rgb(54, 12, 204);
+             }
+             
+             .login{
+                background-color: rgb(255, 0, 0);
+                padding : 50px;
+                margin: 10px 20px 50px 20px;
+                border: 10px solid rgb(0, 0, 0);
+                border-radius: 30px;
+                box-shadow: 0 10px 20px rgba(251, 0, 0, 0.5);
+             }
+             .hello{
+                background-color: blueviolet;
+                padding: 50px;
+                border: 10px solid rgb(0, 0, 0);
+                margin: 30px;
+             }
+             
+             /* css cho các thành phần trong form */
+             .login h1 {
+                color :aqua;
+                /* can giữa */
+                text-align: center;
+                font-family: Arial;
+                font-size: 50px;
+             }
+             .login input {
+                 border-radius: 1010px;
+                 padding : 2px;
+                 margin : 10px;
+                 width: 70px;
+             }
+            </style>
+</body>    
+</html>

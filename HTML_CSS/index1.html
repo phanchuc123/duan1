@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>test1</title>
+        <meta charset="utf-8"> 
+        <style>
+            html, body {
+                margin: 0;
+            }
+            .header{
+                width:100%;
+                height:100vh;
+                /* Đặt mặt nền
+                background-color: yellow; */
+                /* Đặt ảnh nền  */
+                /* background-image: url(https://th.bing.com/th/id/OIP.nBiGxha2IadaAgIdMDOjugHaFj?rs=1&pid=ImgDetMain);
+                background-size: 100%;
+                /* no repeat : khong lap lai anh */
+                /* background-repeat: no-repeat; */ 
+                background-image: linear-gradient(90deg,rgba(255,255,0,0.5),rgba(0,0,255,0.5)),
+                url(https://th.bing.com/th/id/OIP.nBiGxha2IadaAgIdMDOjugHaFj?rs=1&pid=ImgDetMain);
+                background-repeat: no-repeat;
+                background-size: contain;
+                border: 20px dashed #ccc;
+                padding:20px;
+                box-sizing: border-box;
+                background-origin: content-box;
+                /* vi tri cua anh */
+                background-position:top right;
+            }
+            .box{
+                width: 100%;
+                height: 120px;
+                background-color: rgb(190,124,157);
+            }
+            /* hover */
+            h1:hover{
+                color: red;
+            }
+            /* active */
+            .box:active{
+                background-color: blue;
+            }
+            li:first-child{
+                color: red;
+                font-size: 20px;
+            }
+            li:last-child{
+                color: blue;
+            }
+            /* giá trị giả */
+            .box::before{
+                content:"xin chao";
+                color: red;
+                display: block;
+                width: 50px ;
+                height: 50px;
+                background-color:#fff;
+            }
+            .box::after{
+                content:"cac ban";
+                color:blue;
+                display: block;
+                width: 50px ;
+                height: 50px;
+                background-color:#ccc;
+            }
+            h1::first-letter{
+                color: red;
+                font-size: 50px;
+            }
+            h1::first-line{
+                color: blue;
+                font-size: 30px;
+            }
+            h1::selection{
+                background-color: yellow;
+                color: black;
+            }
+        </style>
+
+<!-- Position -->
+        <style>
+           html, body{
+                margin: 0;
+           }
+           h2{
+            position: relative;
+            top: 100px; 
+            left: 200px;
+            bottom: 50px;
+            right: 150px;
+           }
+           .box{
+            width: 100%;
+            height:50px;
+            background-color: #333;
+            position: relative;
+           }
+           .box-child{
+            
+            background-color: #fff;
+            position: absolute;
+           }
+        </style>
+    </head>
+
+    <body>
+        <div class="header"></div>
+        <div class="box"></div>
+        <h1>CSS pseudo-classes <br />Dong thu 2</h1>
+        <ul>
+            <li>:root</li>
+            <li>:hover</li>
+            <li>:avtive</li>
+            <li>:first-child</li>
+            <li>:last-child</li>
+        </ul>
+        <h1>CSS pseudo-elements</h1>
+        <ul>
+            <li>::before</li>
+            <li>::after</li>
+            <li>::first-letter</li>
+            <li>::first-line</li>
+            <li>::selection</li>
+        </ul>
+
+        >
+        <!-- thiet lap vi tri -->
+        <h2>Position</h2>
+            <!--vi tri tuong do : lay minh lam goc toa do  -->
+            <li>Relative</li>
+            <!--vi tri tuyet doi : phu the position gan nhat lam goc toa do  -->
+            <li>Absolute</li>
+            <!--vi tri phu thuoc vao khung trinh duyet  -->
+            <li>Fixed</li>
+            <!-- vi tri bam dinh -->
+            <li>Sticky</li>
+        <div class ="box">
+            <div class = "box-child"></div>
+        </div>
+    </body>
+</html>

@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Function</title>
+</head>
+<body>
+    <script>
+        // Function declaration
+        // khai bao ham: function tenfunc(){}
+        function xinchao(){
+            console.log("Xin chao");
+        }
+        // goi ten ham
+        xinchao();
+        let inputname = "Phan Long Chuc";
+        function xinchao2(name){
+            console.log(`Xin chao ${name} den voi js`);
+        }
+        xinchao2(inputname);
+        xinchao2("Phan Thu Thinh");
+        let a = Number(prompt("Nhap a :"));
+        let b = Number(prompt("Nhap b :"));
+        function Sum(x,y){
+            return x + y;
+        }
+        console.log(`tong ${a} + ${b} = `,Sum(a,b));
+        function Sum1(x=0,y=0){
+            return x + y;
+        }
+        console.log(Sum1(10));
+
+        //Function expression (khong the goi ham truoc khi khai bao)
+        // let ten bien = function(parameters){}
+        let tich = function(a,b){
+            return a*b;
+        }
+        let kq1 = tich(4,5);
+        console.log(kq1);
+        // Arrow Function (khong the goi ham truoc khi khai bao)
+        // Arrow Function => = return
+        let tich1 = (a,b) => a*b;
+        console.log(tich1(2,2));
+        let tich2 = (a,b) =>{
+            let product = tich(a,b);
+            let sum = a + b;
+            return product + sum;
+        };
+        console.log(tich2(2,2));
+    </script>
+</body>
+</html>

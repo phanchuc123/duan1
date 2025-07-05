@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <ul>
+        <li class = "list">Home page</li>
+        <li class = "list">About me</li>
+        <li class = "list" id = "l3">Contact me</li>
+    </ul>
+
+    <script>
+        // getElementsByTagName: Trả về một HTMLCollection chứa tất cả các phần tử có tên thẻ được chỉ định
+        // Ví dụ: document.getElementsByTagName("li") sẽ trả về tất cả các phần tử <li> trong tài liệu
+        let listItem = document.getElementsByTagName("li");
+        console.log(listItem); 
+        console.log(listItem.length);
+        listItem[0].innerHTML = "Trang chu";
+
+        // getElementsByClassName: Chọn các phần tử trên trang web dựa trên class name
+        // Trả về 1 mảng chứa các phần tử có className được chỉ định
+        let li_className = document.getElementsByClassName("list");
+        console.log(li_className);
+        li_className[1].innerHTML = "About you";
+
+        // getElementById: Cho phép truy cập và thao tác với 1 phần tử HTML, bằng cách sử dụng ID của phần tử
+        // Trả về 1 phần tử duy nhất, nếu có nhiều ID trùng nhau thì trả về ID đầu tiên
+        // Nếu không tìm thấy thì trả về null
+
+        let li_id = document.getElementById("l3");
+        console.log(li_id);
+        li_id.innerHTML = "Contact us";
+    </script>
+</body>
+</html>

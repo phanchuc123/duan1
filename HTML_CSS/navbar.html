@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Navbar</title>
+</head>
+<body>
+    <style>
+        * {
+            margin: 0;
+            padding:0;
+            box-sizing: border-box;
+            font-family: sans-serif;
+        }
+        nav {
+            width:100%;
+            height: 75px;
+            background-color: rgb(7,109,109);
+            color: white;
+            display:flex;
+            align-items: center;
+            padding:0 50px;
+            position: fixed;
+            top:0;
+            /* thu tu xep chong cua cac phan tu: so can lop thi nam tren (khac position static) */
+            z-index: 1; 
+        }
+        .logo{
+            font-size: 32px;
+            /* do dam cua phong chu */
+            font-weight: bold;
+            animation: move 2s infinite;
+        }
+        @keyframes move {
+            0%{
+                text-shadow: 5px 0 #f36f0a ;
+            }
+            
+            50%{
+                text-shadow: -5px 0  #015aa8 ;
+            }
+            
+            100%{
+                text-shadow: 5px 0  #f36f0a;
+            }
+        }
+        .menu {
+            width:65%;
+            display: flex;
+            /* can phan tu ben phai */
+            justify-content: right;
+            /* loai bo ki hieu dau dong */
+            list-style: none;
+        }
+        .menu li {
+            margin:20px;
+        }
+        .menu li a{
+            font-size: 19px;
+            color: while;
+            text-decoration: none;
+            transition:  0.5s ease;
+        }
+        .menu li a:hover {
+            color: #e8df27;
+        }
+        .Search{
+            display: flex;
+            align-items: center;
+            margin-right: 0;
+        }
+        .Search form{
+            display: flex;
+            margin:0;
+        }
+        .Search input{
+            padding:10px;
+            margin-right: 10px;
+            border-radius: 5px;
+            font-size: 15px;
+        }
+        .Search input:focus{
+            border: 1px solid rgb(135,134,134)
+        }
+        .Search button{
+            padding: 10px 20px;
+            cursor: pointer;
+            border-radius: 10px;
+            transition: backgroud 1s ease;
+        }
+        .Search button:hover{
+            background: rgb(43, 209, 43);
+        }
+    </style>
+    <nav>
+        <div class = "logo">RANIFLEX</div>
+        <ul class = "menu">
+            <li><a href="">Home</a></li>
+            <li><a href="">About</a></li>
+            <li><a href="">Services</a></li>
+            <li><a href="">Contact</a></li>
+        </ul>
+        <div class = "Search">
+            <form>
+                <input type = "text" placeholder="Search...">
+                <button type = "submit">Search</button>
+            </form>
+        </div>
+    </nav>
+</body>
+</html>

@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<!-- 
+1. h1 - h6: heading: tiêu đề 
+sử dụng h1 1 lần 
+2. p -  paragraph: đoạn văn bản
+3. img - image : hien thị hình ảnh
+4. a - anchor: thẻ liên kết
+5.ul, li - unordered list (danh sách tùy ý sắp xếp), list item (mục danh sách)
+6.table
+7.input
+8.button
+9.div: bao quanh các khối  -->
+<html>
+    <!-- Phần đầu-->
+    <head>
+        <title>Chuc - DUT</title>
+        <!-- Chữ tiếng việt -->
+        <meta charset="utf-8">
+        <!-- Internal :sử dụng thẻ style trong html -->
+        <!-- <style>
+            h1 {
+                 /* thuộc tính color và giá trị red */
+                color: red;
+                /* Tăng giảm kích thước chữ */
+                font-size: 50px;
+            }
+        </style> -->
+             <style>
+                /* h1 phu thuoc vao the html */
+                html{
+                    font-size: 10px;
+                }
+                .box{
+                    width: 100px;
+                    height: 100px;
+                    color:#fff;
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;
+                    
+                }
+                .box1{
+                    background-color:blue;;
+                    /* tang khoang cach */
+                     margin-left:50px;
+                     margin-bottom: 20px;
+                }
+                .box2{
+                    background-color:green;
+                    padding: 10px;
+                    border:10px solid black;
+                    margin-left: 20px;
+                }
+                .box3{
+                    background-color: yellow;
+                    padding: 10px;
+                    border-top-width: 10px;
+                    border-right-width: 12px;
+                    border-bottom-width: 14px;
+                    border-left-width: 16px;
+                    border-style: solid;
+                    border-color: black; 
+                    margin:10px;
+                }
+                .box4{
+                    width: 100px;
+                    height: 100px;
+                    color:#fff;
+                    background-color: darkorchid;
+                    padding:16px;
+                    border:2px solid #333;
+                    box-sizing:border-box;
+                }
+                h1{
+                    font-size: 1rem;
+                }
+             </style>
+
+            <style>
+                #heading-id{
+                    color :aqua;
+                }
+                #heading-id.heading-class{
+                    color: blue;
+                }
+                h1{
+                    color:palevioletred;
+                }
+            </style>
+        <link rel="stylesheet" href="main.css">
+    </head>
+        
+    <!-- Phần thân -->
+    <body> 
+        <div class="box box1">BOX1</div>
+        <div class="box box2">BOX2</div>
+        <div class="box box3">BOX3</div>
+        <div class="box4">Day la noi dung moi</div>
+         <div>
+            <!--  title la Các thuộc tính trong HTML là attribute -->
+            <h1 title="Đây là tiêu đề">Xin chào chức năng đang được phát triển</h1>
+         <!-- input: nhap dau vao -->
+         <input type="text">
+         <input type="checkbox">
+         <!-- Cung mot name thi chon duoc 1 -->
+         <input name="Gioi tinh" type="radio">
+         <input name="Gioi tinh" type="radio">
+         <!-- Button: nut nhap -->
+          <button>Đăng ký</button>
+         <p>Trang web F8 Shop đang trong quá trình phát triển và  có nhiều chức năng mới. Chúng tôi xin mong bạn đ��i và ch�� đ��i đó.</p>
+         <img src="https://scontent.fdad1-3.fna.fbcdn.net/v/t39.30808-6/385299021_827114742241163_6925093280106398435_n.jpg?_nc_cat=110&ccb=1-7&_nc_sid=86c6b0&_nc_eui2=AeGswIqToQDaTCvNQdNe0c73rdqQWun8hiut2pBa6fyGKw0OdQq_vHbZCGZGKqAJGE8BKWEqJNFVlHSfJYDdOUrg&_nc_ohc=e6e2uUPVgL8Q7kNvgGso3Zc&_nc_oc=Adh1xNQEco-EKPO5MpLZBLiZg5NbEedO13ejnz8SzNXFITf_dvTAmy-H9zM8DU4eHG_qcp39N4xERrx2_wtacpKz&_nc_zt=23&_nc_ht=scontent.fdad1-3.fna&_nc_gid=AbvWGyJf4aioM1pr2lwVi2u&oh=00_AYCwkbvXhjwX2IcQf29KI1CcbDPSn5xwSDXx5n432_ExUg&oe=6797DF88" alt="ảnh lớp học">
+         <a href="https://www.facebook.com/phan.chuc.308211">Tới trang cá nhân</a>
+         <ul>
+            <!-- inline -->
+                <li style="color: red;font-size: 50px;">HTML_CSS</li>
+                <li>Java</li>
+                <li>C sharp</li>
+         </ul>
+         <ol>
+                <li>HTML_CSS</li>
+                <li>Java</li>
+                <li>C sharp</li>
+         </ol>
+         <table>
+            <!-- mỗi td sẽ tương ứng với mỗi thẻ thth
+                 tr là một dòng trong table -->
+            <thead>
+               <th>STT</th>
+               <th>Tên</th>
+               <th>Tuổi</th>
+            </thead>
+                
+            <tbody>
+                <tr>
+                    <td>1</td>
+                    <td>Phan Chức</td>
+                    <td>20</td>
+                 </tr> 
+
+                 <tr>
+                    <td>2</td>
+                    <td>Phan Thịnh</td>
+                    <td>17</td>
+                 </tr> 
+            </tbody>
+         </table>
+         </div>
+
+         <div>
+            <!-- id , class-->
+            <h1 id="First-heading">CSS selector</h1>
+            <h1 class="Second-heading">CSS selector</h1>
+            <h1 class="Second-heading">CSS selector</h1>
+            <h2 class="Second-heading">ID & Class</h2>
+            <!-- Priority 
+             1.Internal, External ngang nhau
+             2.inline - 1000
+             3.#id - 100
+             4. .class - 10
+             5.tag - 1
+             6.Equal specificcity
+             7.Universal selector and inherited -->
+            <h1 style="color: blueviolet"id="heading-id" class="heading-class">HTML selector</h1>
+         </div>
+    </body>
+</html>

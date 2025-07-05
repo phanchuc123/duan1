@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Dropdown</title>
+  <style>
+    body {
+      margin: 0;
+      padding: 50px;
+      font-family: Arial, sans-serif;
+      background-color: #f2f2f2;
+    }
+
+    .dropdown {
+      position: relative;
+      /* giup dropdown khong chiem toan dong */
+      display: inline-block; 
+    }
+
+    .dropdown-toggle {
+      padding: 10px 20px;
+      font-size: 16px;
+      cursor: pointer;
+      background-color: #00bcd4;
+      color: white;
+      border: none;
+      border-radius: 6px;
+      transition: background-color 0.3s ease;
+    }
+
+    .dropdown-toggle:hover {
+      background-color: #0097a7;
+    }
+
+    .dropdown-item {
+      /* an item ben trong */
+      display: none;
+      position: absolute;
+      /* nam duoi nut 30px */
+      top: 30px;
+      left: 0;
+      min-width: 160px;
+      margin-top: 8px;
+      padding: 0;
+      /* bo dau cham dau dong */
+      list-style: none;
+      background-color: white;
+      border-radius: 6px;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15);
+      overflow: hidden;
+      /* dam bao menu nam phia tren cac phan tu khac */
+      z-index: 1000;
+    }
+
+    .dropdown-item li a {
+      /* cac the a thanh 1 khoi */
+      display: block; 
+      padding: 10px 15px;
+      /* bo gach duoi */
+      text-decoration: none;
+      color: #333;
+      transition: background-color 0.3s ease;
+    }
+
+    .dropdown-item li a:hover {
+      background-color: #a91717;
+    }
+  </style>
+</head>
+<body>
+  <div class="dropdown">
+    <button class="dropdown-toggle">Dropdown</button>
+    <ul class="dropdown-item">
+      <li><a href="#">Action 1</a></li>
+      <li><a href="#">Action 2</a></li>
+      <li><a href="#">Action 3</a></li>
+    </ul>
+  </div>
+
+  <script>
+    const toggleBtn = document.querySelector(".dropdown-toggle");
+    const menu = document.querySelector(".dropdown-item");
+
+    toggleBtn.addEventListener("click", function (e) {
+      e.stopPropagation(); // Ngăn chặn sự kiện lan ra ngoài
+      menu.style.display = menu.style.display === "block" ? "none" : "block";
+    });
+
+    window.addEventListener("click", function (e) {
+      if (!e.target.closest(".dropdown")) {
+        menu.style.display = "none";
+      }
+    });
+  </script>
+</body>
+</html>

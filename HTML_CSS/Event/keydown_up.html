@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <style>
+        .btn {
+            margin: 2px;
+            height: 100px;
+            width: 100px;
+        }
+    </style>
+
+
+    <button class="btn">Click me</button>
+    <button class="btn">Click me</button>
+    <button class="btn">Click me</button>
+    <button class="btn">Click me</button>
+    <button class="btn">Click me</button>
+    <button class="btn">Click me</button>
+    <button class="btn">Click me</button>
+    <button class="btn">Click me</button>
+    <button class="btn">Click me</button>
+    <button class="btn">Click me</button>
+    <button class="btn">Click me</button>
+    <button class="btn">Click me</button>
+    <button class="btn">Click me</button>
+    <button class="btn">Click me</button>
+    <button class="btn">Click me</button>
+    <button class="btn">Click me</button>
+    <button class="btn">Click me</button>
+    <button class="btn">Click me</button>
+    <button class="btn">Click me</button>
+    <button class="btn">Click me</button>
+
+    
+    <h2 class = "title">Title</h2>
+    <h2 class = "title">Title</h2>
+    <h2 class = "title">Title</h2>
+    <h2 class = "title">Title</h2>
+    <h2 class = "title">Title</h2>
+    <h2 class = "title">Title</h2>
+    <h2 class = "title">Title</h2>
+    <h2 class = "title">Title</h2>
+    <h2 class = "title">Title</h2>
+    <h2 class = "title">Title</h2>
+ 
+    <input type ="text" id = "inp">
+    <button id="btn1">Click me</button> 
+
+    <script>
+        function randomColor() {
+            const r = Math.floor(Math.random() * 256);
+            const g = Math.floor(Math.random() * 256);
+            const b = Math.floor(Math.random() * 256);
+            return `rgb(${r}, ${g}, ${b})`;
+        }
+        const buttons = document.querySelectorAll('.btn');
+        for(let btn of buttons) {
+            if(btn instanceof HTMLButtonElement) {
+                btn.addEventListener('click', function() {
+                    btn.style.backgroundColor = randomColor();
+                    btn.style.color = randomColor();
+                });
+            }
+        }
+        const titles = document.querySelectorAll('.title');
+        for(let title of titles){
+            if(title instanceof HTMLHeadingElement) {
+                title.addEventListener('click', function() {
+                    title.style.color = randomColor();
+                    title.textContent = "Title changed!";
+                    title.style.backgroundColor = randomColor();
+                });
+            }
+        }
+        //event keydown: xảy ra khi người dùng nhấn phím
+        
+        const inp = document.querySelector('#inp');
+        // inp.addEventListener("keydown",function(){
+        //     alert("Key pressed: " + inp.value);
+        // })
+
+        inp.addEventListener("keyup",function(){
+            alert("Key released: " + inp.value);
+        })
+    </script>
+</body>
+</html>

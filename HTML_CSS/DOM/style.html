@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div id="container">
+        <h1 id="item1">HTML_CSS</h1>
+        <h2 id="item2">JavaScript</h2>
+    </div>
+
+    <script>
+        // cách 1:
+        let heading = document.getElementById("item1");
+        heading.style.color = "red";
+        heading.style.fontFamily = "Arial";
+        heading.style.display = "flex";
+        heading.style.justifyContent = "center";
+
+        // cách 2:
+        let title = document.getElementById("item2");
+        Object.assign(title.style, {
+            color: "green",
+            display: "flex",
+            justifyContent: "center",
+            fontSize: "50px"
+        });
+
+        let con = document.getElementById("container");
+        Object.assign(con.style, {
+            backgroundColor: "pink",
+            height: "300px",
+            display: "flex",          
+            justifyContent: "center",
+            alignItems: "center" ,
+            flexDirection: "column"      
+        });
+    </script>
+</body>
+</html>

@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Responsive Card</title>
+  <style>
+    body {
+      margin: 0;
+      padding: 20px;
+      font-family: Arial, Helvetica, sans-serif;
+      background: #eee;
+    }
+
+    .card-container {
+      width: 100%;
+      max-width: 300px;
+      border: 1px solid #ccc;
+      border-radius: 10px;
+      background-color: #171616;
+      color: rgb(177, 164, 164);
+      overflow: hidden;
+      margin: auto;
+    }
+
+    .card-img {
+      width: 100%;
+      height: 180px;
+      background-image: url('anhnen.jpg');
+      background-size: cover;
+      background-position: center;
+      border-radius: 10px 10px 0 0;
+    }
+
+    .card-body {
+      padding: 15px;
+    }
+
+    .card-body h5 {
+      font-size: 20px;
+      color: white;
+    }
+
+    .card-body button {
+      border-radius: 5px;
+      padding: 5px 20px;
+      font-size: 15px;
+      background-color: #007bff;
+      color: white;
+      border: none;
+      cursor: pointer;
+      transition: background-color 0.3s ease;
+      display: inline-block;
+      margin-top: 10px;
+    }
+
+    .card-body button:hover {
+      background-color: #0ecf55;
+    }
+
+    /* Responsive for smaller screens */
+    @media (max-width: 400px) {
+      .card-body p {
+        font-size: 14px;
+      }
+
+      .card-body button {
+        font-size: 14px;
+        padding: 5px 15px;
+      }
+    }
+  </style>
+  
+  <style>
+    .card-container1 {
+        width: 100%;
+        max-width: 300px;
+        border: 1px solid #ccc;
+        border-radius: 10px;
+        background-color: #171616;
+        overflow: hidden;
+        margin: auto;
+        margin-top: 0;
+    }
+    .card-body1 {
+        padding: 15px;
+        color: rgb(177, 164, 164);
+    }
+    .card-body1 h5 {
+        font-size: 20px;
+        color: white;
+        margin-top: 0;
+        margin-bottom: 2px;
+    }
+    .card-body1 h6 {
+        font-size: 15px;
+        margin-top: 0;
+    }
+    .card-link {
+        display: inline-block;
+        padding-right: 20px;
+        
+    }
+  </style>
+</head>
+<body>
+  <div class="card-container">
+    <div class="card-img"></div>
+    <div class="card-body">
+      <h5 class="card-title">Card title</h5>
+      <p>
+        Some quick example text to build on the card title and make up the bulk
+        of the card's content.
+      </p>
+      <button class="btn" type="submit">Go somewhere</button>
+    </div>
+  </div>
+  <div class="card-container1">
+    <div class="card-body1">
+        <h5 class = "card-title">Card title</h5>
+        <h6 class = "card subtitle">Card subtitle</h6>
+        <p class = "card-text">Some quick example text to build on the card title and make up the bulk
+        of the card's content.</p>
+        <a href="#" class = "card-link">Card link</a>
+        <a href="#" class = "card-link">Another link</a>
+    </div>
+  </div>
+
+
+
+  <style>
+    .card-body2 {
+        padding: 15px;
+    }
+    .card-body2 .body1 h5 {
+        font-size: 20px;
+        color: white;
+        margin-top: 0;
+        margin-bottom: 2px;
+    }
+    .card-body2 .body1 p {
+        margin-top: 0;
+    }
+    .card-body2 ul .card-link {
+        display: inline-block;
+    }
+    ul{ 
+        padding-left:0;
+        list-style-type: none;
+        border : 1px solid #444;
+    }
+    li{
+        list-style-type: none;
+        border : 1px solid #444;
+        padding: 10px;
+    }
+    
+  </style>
+  <div class="card-container">
+    <div class = "card-img"></div>
+    <div class = "card-body2">
+        <div class="body1">
+            <h5 class = "card-title">Card title</h5>
+            <p>Some quick example text to build on the card title and make up the builk
+             of the card's context</p>
+        </div>
+        <ul class = "list-group">
+             <li class = "list item">An first Item</li>
+             <li class = "list item">An second Item</li>
+             <li class = "list item">An third Item</li>
+             <a href="#" class = "card-link">Card link</a>
+             <a href="#" class = "card-link">Another link</a>
+        </ul>
+    </div>
+  </div>
+</body>
+</html>

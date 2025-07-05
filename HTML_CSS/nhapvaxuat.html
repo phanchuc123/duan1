@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nhap xuat du lieu</title>
+</head>
+<body>
+    <script>
+        let username;
+        username = prompt("Nhap ten :");
+        console.log("Ten cua ban la :"+username);
+        console.log("chao mung " + username + " den voi javascript");
+        let so = 10;
+        let so1 = 20;
+        let kq =so*so1;
+        let check = true;
+        let diemtoan;
+        let connect = null;
+        console.log("so ban vua nhap la :"+so);
+        console.log(`so thu nhat la %s va so thu hai la %s`,so,username);
+        console.log(`ket qua %s nhan %s la %s :`,so,so1,kq);
+        console.log(typeof(username));// kieu String
+        console.log(typeof(so));// kieu Number
+        console.log(typeof(check)); // kieu boolean
+        console.log(typeof(diemtoan)); // kieu undefined la kieu ma chua gan gia tri
+        console.log(typeof(connect)); // kieu null thi tra ve object (la 1 loi cua js)
+        let num = parseInt(prompt("nhan vao di cu :"));
+        let kq1 = num + 10; // khi chuoi + so thi ep ve string 
+        console.log("ket qua la :",kq1);
+        console.log(typeof kq1);
+        // mang
+        let arr1 = [1,2,"chuc", true];
+        console.log(arr1);
+        console.log(arr1.length);
+        arr1[0]=3;
+
+        console.log(arr1);
+        let arr2 = new Array();
+        let arr3 = new Array(1,2,"HCuc",true);
+        let arr4 = new Array(2);// lenght = 2
+        console.log(arr2);
+        console.log(arr3);
+        console.log(arr4);
+        let arr7 = new Array(4);
+
+// Nhập giá trị vào mảng
+for (let i = 0; i < arr7.length; i++) {
+    arr7[i] = prompt("Nhập số thứ " + (i + 1) + ":");
+}
+
+// Xuất giá trị ra console
+for (let i = 0; i < arr7.length; i++) {
+    console.log("Phần tử thứ " + (i + 1) + ": " + arr7[i]);
+}
+
+      let arr8 = [1,2,3,4,5];
+      for(let element of arr8){
+        console.log(element);
+      }
+    </script>
+</body>
+</html>

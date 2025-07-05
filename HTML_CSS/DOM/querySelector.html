@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1 id = "title">Chuoi bai ve querySelector</h1>
+    <ul>
+        <li class="list">
+            <a href="https://www.facebook.com/">Trang chu</a>
+        </li>
+        <li class="list">About me</li>
+        <li class="list">Contact me</li>
+    </ul>
+    <input type = "checkbox" name = "agree" id = "agree"> Chon di cu
+    <script>
+        // querySelector có thể chập nhận bất kỳ bộ chọn CSS nào như: id, class, tagName,... để chọn phần tử
+        // Trả về phần tử đầu tiên trogn document phù hợp với selector được chỉ định
+        // 1.chọn phần tử theo id: document.querySelector("#id")
+        // 2.chọn phần tử theo class: document.querySelector(".class")
+        // 3.chọn phần tử theo tagName: document.querySelector("tagName")
+        // 4.chọn phần tử <a> trong danh sách: document.querySelector("ul li a")
+
+        let listTitle = document.querySelector("#title");
+        listTitle.textContent = "Toi da thay doi noi dung cua h1";
+
+        let li_first = document.querySelector(".list");
+        // li_first.textContent = "Trang cua toi";
+
+        let li_link = document.querySelector("ul a");
+        console.log(li_link);
+
+        let checkbox = document.querySelector("input[type='checkbox']");
+        checkbox.checked = true;
+
+        // querySelectorAll: giống với querySelector
+        // Nhưng trả về danh sách các phần tử trong document phù hợp với selector được chỉ định
+
+        let listItems = document.querySelectorAll(".list");
+        console.log(listItems);
+        listItems[1].innerHTML = "About me - Da thay doi";
+    </script>
+</body>
+</html>

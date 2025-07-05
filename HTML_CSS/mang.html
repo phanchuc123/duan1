@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Phuong thuc mang</title>
+</head>
+<body>
+    <script>
+        let arr1 = [1,2,3];
+        let arr2 = [4,5,6];
+        // concat: noi hai chuoi voi nhau
+        let newarr = arr1.concat(arr2);
+        console.log(newarr);
+        // push: them 1 hoac nhieu phan tu vao cuoi mang
+        arr1.push(4);
+        console.log(arr1);
+        // unshift: them mot hoac nhieu phan tu vao dau mang
+        arr2.unshift(1,2);
+        console.log(arr2);
+        //pop: loai bo phan tu cuoi cung cua mang (lam thay doi mang goc) va tra ve phan tu da bi loai bo
+        let arr3 = [1,2,3];
+        let removeElement = arr3.pop();
+        console.log(arr3);
+        console.log(removeElement);
+        //shift: loai bo phan tu dau tien cua mang va tra ve phan tu da bi loai bo
+        let arr4 = [1,2,3];
+        let removeElement1 = arr4.shift();
+        console.log(arr4);
+        console.log(removeElement1);
+        //slice(srtaIndex, endIndex) : Tao 1 ban sao cua mang -> luu sang 1 vung nho moi,
+        // cat chuoi goc, lay tu srtaIndex den sat endIndex chuoi goc (khong bao endIndex)
+        let arr5 = [1,2,3,4,5];
+        let sliceArr = arr5.slice(1,4); // cat tu index 1 den sat 4
+        console.log(sliceArr);
+        // includes : kiem tra xem mot mang co chua 1 gia tri cu the hay khong. tra ve true or false
+        let arr6 = [1,2,3,4,5,]
+        let isPresent = arr6.includes(3);
+        console.log(isPresent); // true
+        //indexOf: tra ve chi so cua phan tu xuat hien lan dau tien trong mang neu tim thay. Tra ve -1 neu khong tim thay
+        let arr7 = [1,2,3,4,2,5];
+        let index = arr7.indexOf(2); // output: 1
+        console.log(index);
+        //lastIndexOf: tra ve chi so cua phan tu xuat hien lan cuoi cung trong mang neu tim thay. Tra ve -1 neu khong tim thay
+        let index2 = arr7.lastIndexOf(2); // output: 4
+        console.log(index2);
+        // reverse : dao nguoc thu tu cua cac phan tu trong mang goc (khong tao ra mang moi)
+        arr7.reverse();
+        console.log(arr7);
+        // join(separator) : noi cac phan tu trong mang thanh chuoi, theo ky tu phan tach 'separator'
+        // neu trong truyen separator thi mac dinh la dau ','
+        let arr8 = ["Nam","trung",1,2,3];
+        let string1 = arr8.join();
+        console.log(string1);
+        console.log(typeof string1);
+        
+        let arr9 = ["Nam","trung",1,2,3];
+        let string2 = arr9.join("+");
+        console.log(string2);
+        //splice(start,deleteCount,item1,item2,...);
+        //start: chi dinh vi tri bat dau thay doi mang (neu so am thi tinh tu cuoi mang)
+        //deleteCount: so nguyen chi dinh so luong phan tu se bi loai bo tu mang, bat dau tu start
+        //item1, item2,...: cac phan tu moi se duoc them vao vi tri start
+        let arr10 = new Array(1,2,3,4,5);
+        arr10.splice(2,1,6);
+        console.log(arr10);
+        //sort : sap xep phan tu
+        let arr11 = new Array("c","b","a");
+        console.log(arr11.sort());
+        let arr12 = new Array("bcc","a","c"); // lay ki tu dau de so sanh
+        console.log(arr12.sort());
+    </script>
+</body>
+</html>

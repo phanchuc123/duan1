@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Toi hoc innerHTML</h1>
+    <div id="demo">
+        <p>Toi học 
+            <b style = "display:none;">JavaScropit</b>
+            tai tuhoc.cc
+        </p>
+    </div>
+    <div id="demo1"></div>
+    <script>
+        // innerHTML, textContent, innerText: đều sử dngj để get, set với các phần tử HTML chứa nội dung văn bản (p, div, span, ...)
+        // textContent: Trả về nội dung nằm trong phần tử, bao gồm cả khoảng trắng, tab, xuống dòng,...
+        // innerText: Trả về văn bản mà người dùng có thể nhìn thấy trên trình duyệt, loại bỏ các phần tử được ẩn bởi CSS.
+        // innerHTML: Trả về toàn bộ nội dụng HTML của phần tử (các thẻ HTML, cấu trúc của chúng)
+        //  là thuộc tính của các phần từ HTML mà cho phép xem, sửa nội dung HTML trong 1 phần tử
+        //  truy xuất đến h1
+        let heading = document.firstElementChild.lastElementChild.firstElementChild;
+        // dùng innerHTML để thay đổi nội dung của h1
+        heading.innerHTML = "Toi da thay doi noi dung cua h1";
+        console.log(heading); 
+
+        let elm = document.getElementById("demo");       
+        
+        console.log("textContent: ",elm.textContent);
+        console.log("innerHTML: ",elm.innerHTML);
+        console.log("innerText: ",elm.innerText);
+
+        let elm1 = document.getElementById("demo1");
+        elm1.innerHTML = "<p>Xin chao <strong>Phan Long Chuc</strong></p>";
+    </script>
+</body>
+</html>

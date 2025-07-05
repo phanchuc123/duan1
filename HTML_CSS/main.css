@@ -1,0 +1,29 @@
+/* CSS variable: biến trong CSS
+biến toàn cục trong css */
+:root {
+    --text-color: green ;
+}
+/* External */
+/* id là #*/
+#First-heading {
+    /* thuộc tính color và giá trị red */
+   color: blue;
+   /* Tăng giảm kích thước chữ */
+   font-size: 50px;
+}
+/* class làà . */
+.Second-heading {
+    color: yellow;
+    font-size: 40px;
+}
+
+html{
+    color:var(--text-color);
+}
+li{
+    --my-color: yellow;
+    color:var(--my-color) !important;
+}
+li{
+    color:blue;
+}

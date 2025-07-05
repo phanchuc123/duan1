@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div class="classlist" id="myelement">TOI HOC JS</div>
+
+    <style>
+        .classlist{
+            background-color: aqua;
+        }
+        .newclass{
+            color:brown;
+            background-color: blue;
+            font-size: 36px;
+        }
+        .abc{
+            color: chartreuse;
+        }
+        .def{
+            font-size:50px;
+        }
+    </style>
+
+    <script>
+        // classList.add() : thêm 1 lớp mới vào phân tử.
+        let item1 = document.querySelector("#myelement");
+        item1.classList.add("newclass");
+        // classList.contaions(): kiểm tra xem phần tử có chứa lớp cụ thể không
+        console.log(item1.classList.contains("newclass"));
+        // classList.remove(): xóa 1 lớp khỏi phần tử
+        item1.classList.remove("newclass");
+        console.log(item1.classList.contains("newclass"));
+        // classList.replace(class cu, class moi)
+        item1.classList.replace("classlist","abc");
+        // classList.toggle(): loại bỏ 1 lớp nếu lớp đó đã tồn tại và thêm nếu chưa có lớp đó
+        item1.classList.toggle("def");
+        item1.classList.toggle("abc");
+    </script>
+</body>
+</html>

@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <style>
+        div {
+            border: red 2px solid;
+        }
+        #grandparent {
+            width: 90vw;
+            background-color: #f1f1f1;
+        }
+        #parent {
+            width: 70vw;
+            background-color: #07afde;
+        }
+        #child {
+            width: 50vw;
+            background-color: #aedb09;
+        }
+    </style>
+    <!-- Event Capturing -->
+    <div id = "grandparent">
+        <p>Grand parent</p>
+        <div id ="parent">
+            <p>Parent</p>
+            <div id="child">
+                <p>Child</p>
+            </div>
+        </div>
+    </div>
+    <script>
+        // DOM là Document Object Model
+        // Event Capturing: Sự kiện được phát đi từ gốc cây DOM đến phần từ đích (từ ông nội đến cha đến con)
+        const child = document.getElementById("child");
+        const parent = document.getElementById("parent");
+        const grandparent = document.getElementById("grandparent");
+
+        child.addEventListener("click",function(e){
+            console.log("Child clicked")
+        },{capture:true}); // capture: true để sự kiện được xử lý trong giai đoạn bắt
+                           // nếu capture: false thì giống với bubblinng
+        parent.addEventListener("click",function(e){
+            console.log("Parent clicked");
+        },{capture:true});
+        // output: Grandparent click, ngăn chặn sự kiện Granddparent clicked1
+        grandparent.addEventListener("click",function(e){
+            e.stopImmediatePropagation();// ngăn chặn sự kiện của cùng 1 element
+            console.log("Grandparent clicked");
+        },{capture:true});
+        grandparent.addEventListener("click",function(e){
+            console.log("Grandparent clicked 1");
+        },{capture:true});
+    </script>
+</body>
+</html>

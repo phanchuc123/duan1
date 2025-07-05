@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h2>Change Event</h2>
+    <input type = "text" id = "name" placeholder="Enter your name">
+    <h2 id = "hi">Input Event</h2>
+    <input type = "text" id = "name1" placeholder="Enter your name">
+    <input type= "submit" id = "submit" value="Submit">
+    <script>
+        // change event: sự kiện xảy ra khi giá trị thay đổi và mất focus 
+        const inputF = document.getElementById("name");
+        inputF.addEventListener("change",function(e){
+            console.log(e.target.value); // In ra giá trị của input khi thay đổi
+        });
+        // input event: Đây là 1 sự kiện mà trình duyệt
+        // kích hoạt khi người dùng thực hiện bất kì hành động nhập liệu nào trên 1 phần từ HTML
+        const inputF1 = document.getElementById("name1");
+        inputF1.addEventListener("input",function(e){
+            console.log(e.target.value); // In ra giá trị của input khi thay đổi
+            const hi = document.getElementById("hi");
+            hi.textContent = e.target.value; // Cập nhật nội dung của thẻ h2 với giá trị nhập vào
+        });
+    </script>
+</body>
+</html>
