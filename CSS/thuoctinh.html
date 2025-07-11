@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <style>
+        h1{
+            /* kieu chu */
+            font-style: italic;
+            /* font chu */
+            font-family: Arial, Helvetica, sans-serif;
+            /* chuyen hoa thuong */
+            text-transform: lowercase;
+            /* can giua */
+            text-align: center;
+            /* opacity : quy dinh do trong suot */
+            opacity: 70%;
+        }
+        h2{
+            opacity: 0.5;
+        }
+        h3{
+            /* display : none ( an phan tu khoi giao dien (xoa ca khong gian no dang chiem))*/
+            display: none;
+        }
+        h4{
+            /* visibility : giống với opacity nhưng không tương tác được */
+            /* ẩn */
+            visibility: hidden;
+             /*hiện  */
+             visibility: visible;
+        }
+        img{
+            transition: 1.5s;
+        }
+        input:checked ~ img{
+            /* display: none; */
+            /* visibility: hidden; */
+            opacity: 0;
+        }
+        p,.item{
+            color: red;
+        }
+        .item.item1{
+            background-color: aqua;
+        }
+        /* s1+s2 :chọn phần tử s2 sát s1 nhất 
+           s1~s2 : chọn tất cả s2 nằm phía sau s1*/
+    </style>
+    <input type="checkbox" name="" id=""> Click de an <br>
+    <img src="../anh.jpg" alt="">
+    <h1>Hoc cac thuoc tinh CSS</h1>
+    <h2>Hoc cac thuoc tinh CSS</h2>
+    <h3>Hoc cac thuoc tinh CSS</h3>
+    <h4>Hoc cac thuoc tinh CSS</h4>
+    <p>helo ae</p>
+    <p>helo ae</p>
+    <p >helo girl</p>
+    <!-- ul.listitem>li*3{Item $} -->
+    <ul class="listitem">
+        <li class ="item">Item 1</li>
+        <li class ="item">Item 2</li>
+        <!-- class.class -->
+        <li class ="item item1">Item 3</li>
+        
+    </ul>
+</body>
+</html>

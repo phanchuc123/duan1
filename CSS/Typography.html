@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <a href="" class="the1">The 1</a>
+    <a href="" class="the2">The 2</a>
+    <a href="" class="the3">The 3</a>
+    <p class = "the4">toi hoc Text decoration</p>
+    <p class = "the5">toi hoc Text decoration1</p>
+    <p class = "the6">Mưa phảng phất trong không gian ấm áp của mùa xuân, nhè nhẹ, nhè nhẹ. Mưa dần buông những hạt cuối cùng, vạn vật được mưa tắm mắt trở nên căng tràn sức sống. Cánh mai vàng nhờ thưởng thức hạt ngọc tinh túy của bầu trời mà tươi tắn hơn. Chồi non mơn mởn, xanh biếc. Nương lúa, bãi ngô của người nông dân cũng mướt xanh. Mưa xuân diệu kỳ còn mang đến cho lòng người niềm vui khoan khoái, yêu biết bao nhiêu những cơn mưa xuân tuyệt vời như thế.</p>
+    
+    <!-- The pre giu nguyen kieu dinh dang -->
+    <pre> Hello gia gu        fjsjdjs</pre>
+    <pre>
+        <code>
+&lt;!DOCTYPE html&gt;
+&lt;html lang="en"&gt;
+&lt;head&gt;
+    &lt;meta charset="UTF-8"&gt;
+    &lt;meta name="viewport" content="width=device-width, initial-scale=1.0"&gt;
+    &lt;title&gt;Document&lt;/title&gt;
+&lt;/head&gt;
+&lt;/html&gt;
+</code>
+</pre>
+<!-- hien thi code len trình duyet -->
+<xmp>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+</html>
+</xmp>
+    <h1>Toi hoc text shadow</h1>
+    <h2>Toi hoc text shadow 2</h2>
+    <p class = "the7">Mưa phảng phất trong không gian ấm áp của mùa xuân, nhè nhẹ, nhè nhẹ. Mưa dần buông những hạt cuối cùng, vạn vật được mưa tắm mắt trở nên căng tràn sức sống. Cánh mai vàng nhờ thưởng thức hạt ngọc tinh túy của bầu trời mà tươi tắn hơn. Chồi non mơn mởn, xanh biếc. Nương lúa, bãi ngô của người nông dân cũng mướt xanh. Mưa xuân diệu kỳ còn mang đến cho lòng người niềm vui khoan khoái, yêu biết bao nhiêu những cơn mưa xuân tuyệt vời như thế.</p>
+    <style>
+        .the1{
+            /* bo gach chan */
+            text-decoration: none;
+        }
+        .the2{
+            /* them gach ngang */
+            text-decoration: line-through;
+        }
+        .the3{
+            /*them gach tren dau  */
+            text-decoration: overline;
+        }
+        .the4{
+            /* them gach chan */
+            text-decoration:underline;
+            /* capitalize:Viet hoa chu cai dau
+               lowercase: Viet thuong toan bo text
+               uppercase: Viet hoa toan bo textt */
+            text-transform: capitalize;
+        }
+        .the5{
+            text-decoration: underline solid blue 10px;
+        }
+        .the6{
+            /* thut le -40px */
+            /* text-indent:-40px; */
+            /* thut le 40px */
+            text-indent: 40px;
+            /* 
+               white-space:normal (trang thai mac dinh)
+               white-space:nowrap (khong xuong dong ke ca cham toi le)
+               white-space:pre (giong the pre)
+               white-space:pre-line (khoảng trắng thừa sẽ loại bỏ, xuống dòng được giữ nguyên)
+               white-space:pre-wrap (khoảng trắng thừa và xuống dòng được giữa nguyên*/
+            white-space: nowrap;
+        }
+        h1{
+            /* đổ bóng: ngang(+ từ trái sang phải,- từ phải sang trái), dọc(+ từ trên xuống,- từ dưới lên), độ nhè */
+            text-shadow: 20px 0 5px red;
+        }
+        h2{
+            text-shadow: 0 20px 4px rebeccapurple;
+        }
+        .the7{
+            width: 300px;
+            height: 100px;
+            /* Visible:thuộc tính mặc định
+               auto: Nếu nội dung ngắn(không có scroll), nội dung dài(Tự tạo ra scroll)
+               hidden:Ẩn nội dung khi nội dung vượt box chứa
+               scroll:Tự động hiện thanh cuộn khi tràn khung */
+            overflow: auto;
+            overscroll-behavior:contain;
+        }
+    </style>
+</body>
+</html>

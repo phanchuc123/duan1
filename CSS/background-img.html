@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <style>
+        .bocon{
+            width: 500px;
+            height: 400px;
+            background-image: url(./anh.jpg);
+            /* contain: ảnh vừa khung hình, giữ nguyên tỉ lệ ảnh
+            nếu còn khoảng trống thì ảnh sẽ bị lặp lại */
+            background-size: contain;
+            /* cover: ảnh vừa khớp khung hình, giữ nguyên tỉ lệ ảnh
+            có thể mất 1 phần ảnh, không bị lặp lại */
+            background-size: cover;
+            /* chiều dài, chiều cao */
+            background-size: 200px 100%;
+            /* background-repeat: no repeat (không lặp lại)
+                                  repeat-x (lặp lại theo trục x)
+                                  repeat-y
+                                  repeat (mặc định) */
+            background-repeat: no-repeat;
+
+            /* background-position: Vị trí bắt đầu của ảnh  */
+            background-position: top right;
+            background-position: 0% 10%;
+            
+        }
+        .box{
+            height: 100px;
+            margin-bottom: 10px;
+        }
+        .box2{
+            /* các hướng: to left, to right, to top, to bottom, to top left, to top right, top bottom left, to bottom right */
+            background-image: linear-gradient(to left, red, blue);
+        }
+        .box1{
+            background-image: linear-gradient(45deg, green,yellow);
+        }
+        /*background-clip ( quy định vùng đổ nền)
+          background-clip: border-box (mặc định, ảnh đổ từ border)
+                           padding-box (ảnh đổ từ padding vào)
+                           content-box (ảnh đổ từ content) */
+
+        .text_hi{
+            color: transparent;
+            background-color:#00dbde ;
+            background-image: linear-gradient(90deg,#00dbde,#fc00ff);
+            background-clip: text;
+            -webkit-background-clip: text;
+        }
+    </style>
+    <div class="bocon"></div>
+    <div class="box box1"></div>
+    <div class="box box2"></div>
+    <h1>Welcome ban den voi <strong class = "text_hi">Nha cua chung ta</strong> nhe cu</h1>
+\
+</body>
+</html>

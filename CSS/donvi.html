@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <style>
+        .px{
+        /* font-size của text HTML là 16px
+        8px */
+        /* px : đơn vị tuyệt đối */
+         font-size: 20px; 
+         width: 150px;
+         height: 150px;
+         background-color: aqua;
+        }
+        /* n% : kích thước bằng n% so với phần tử cha */
+        .parent{
+            width: 400px;
+            height: 400px;
+            background-color: blueviolet;
+        }
+        .child{
+            width: 50%;
+            height: 50%;
+            background-color: aqua;
+        }
+        .child1{
+            /* nvw: n% chiều rộng khung hình
+               nvh: n% chiều cao khung hình */
+            width: 50vw;
+            height: 50vh;
+            background-color: aqua;
+        }
+        .parent2{
+            font-size: 12px;
+        }
+        p{
+            /* 2em : kích thước gấp 2 lần font chữ hiện tại (có kế thừa) */
+            font-size: 2em;
+        }
+        /* 2rem: kích thước gấp 2 lần font chữ root element(16px) (không kế thừa) */
+
+    </style>
+    <h2 class = "px">Don vi px</h2>
+    <div class="parent">
+        <div class="child">Don vi %</div>
+    </div>
+    <div class="parent1">
+        <div class="child1">Don vi vw vh</div>
+    </div>
+    <div class="parent2">Don vi
+        <p>Don vi em</p>
+    </div>
+
+</body>
+</html>

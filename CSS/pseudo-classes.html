@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+     <input type="button" class = "btn"value="Click" style = "width: 50px;height: 25px;">
+     <a href="https://www.facebook.com/" class = "fb">Click de vao fb</a>
+     <div class="div_elm"></div>
+     <div class="div_elm">
+        <p>Co 2 thu ban thay doi</p>
+     </div>
+     <br>
+     <ul>
+        <li><a href="#mobai">chuyen den mo bai</a></li>
+        <li><a href="#thanbai">chuyen den than bai</a></li>
+        <li><a href="#ketbai">chuyen den ket bai</a></li>
+     </ul>
+
+     <h2 id = "mobai">Mo bai</h2>
+     <p>jdfsafhfgaanfanaldaacbvadviadavbdbahaahffa
+        fhafhafafhafhafhavhavhahvhahvaha
+        vajvhavjavavhahhafDDFfssssssssssssssssssssssssssssssssssssssfs
+        vajvhavjavavhahhafDDFfssssssssssssssssssssssssssssssssssssssfssd
+       
+     </p>
+     <h2 id = "thanbai">than bai</h2>
+     <p>jdfsafhfgaanfanaldaacbvadviadavbdbahaahffa
+        fhafhafafhafhafhavhavhahvhahvaha
+        vajvhavjavavhahha
+     </p>
+     <h2 id = "ketbai">ket bai</h2>
+     <p>jdfsafhfgaanfanaldaacbvadviadavbdbahaahffa
+        fhafhafafhafhafhavhavhahvhahvaha
+        vajvhavjavavhahha
+     </p>
+     <br>
+     <div>
+        <p class ="top">Doan 1</p>
+        <p class ="top">Doan 2</p>
+        <h2 class ="top">The h dau tien</h2>
+        <p class ="top">Doan 3</p>
+        <p class ="top">Doan 4</p>
+        <p class ="top">Doan 5</p>
+        <p class ="top">Doan 6</p>
+     </div>
+
+     <div class="demo">
+        <p>Noi dung 1</p>
+        <p>Noi dung 2</p>
+        <p>Noi dung 3</p>
+        <h2>The h dau tien</h2>
+        <p>Noi dung 4</p>
+        <p>Noi dung 5</p>
+        <p>Noi dung 6</p>
+     </div>
+     <div>
+        <p>The duy nhat</p>
+     </div>
+    <style>
+        /* di chuyen chuot len */
+        .btn:hover{
+            background-color: aqua;
+            transition:2s;
+        }
+        /* nhan giu chuot */
+        .btn:active{
+            color: red;
+        }
+        /* chua click vao */
+        .fb:link{
+            color: chocolate;
+        }
+        /*da click vao */
+        .fb:visited{
+            color: red;
+        }
+        /*chon cac the div khong co noi dung */
+        .div_elm:empty{
+            background-color: blue;
+            width: 200px;
+            height: 200px;
+        }
+        h2:target{
+            color: blue;
+        }
+        /* chon the p la the con dau tien (phai la phan tu con dau tien) */
+        p:first-child{
+            font-size: 30px;
+            color: red;
+        }
+        /* chon  the p la the con cuoi cung */
+        p:last-child{
+            color: blue;
+            font-size: 30px;
+        }
+        /* :nth-child(n) voi n co th la old(n le), even(n chan)
+        cho the p la the con thu 2 tu tren xuong */
+        p:nth-child(2){
+            color: chartreuse;
+        }
+        /* phan tu thu 2 tu duoi len */
+        p:nth-last-child(2){
+            color: chocolate;
+        }
+        p:only-child{
+            background-color: aqua;
+        }
+        /* h2:first-of-type : chon loai the h2 xuat hien dau tien trong the cha
+             :last-of-type : cuoi cung
+             :nth-of-type(n) : xuat hien thu n trong the cha
+             :nth-last-of-type(n) : xuat hien thu n trong the cha tinh tu duoi len
+             :only-of-type : xuat hien duy nhat  */
+        h2:first-of-type{
+            background-color: blueviolet;
+        }
+        /* chon tat cac the co class la top va tru the p */
+        .top:not(p){
+            color:aqua;
+        }
+    </style>
+</body>
+</html>

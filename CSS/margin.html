@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=!, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <style>
+        .box{
+            width: 200px;
+            height: 200px;
+            border: 10px solid red;
+        }
+        /* margin collapse: là hiện tượng chồng lặp thuộc tính margin khi 2 phần tử liên kề cùng
+        thiết lập margin với phần tử còn lại theo chiều dọc */
+        .box1{
+            margin-bottom: 50px;
+        }
+        .box2{
+            /* ưu tiên */
+            margin-top: 70px; 
+        }
+        /* margin collapse không ảnh hưởng theo chiều ngang */
+        .item{
+            background: yellow;
+            border: 2px solid red;
+        }
+
+        span:first-of-type{
+            margin-right: 10px;
+        }
+        span:nth-last-of-type(2){
+            margin-left: 50px;
+        }
+    </style>
+    <div class="box box1">Tu hoc 1</div>
+    <div class="box box2">Tu hoc 2</div>
+
+    <span class="item item1">Noi dung 1</span>
+    <span class="item item2">Noi dung 2</span>
+    <span class="item item3">Noi dung 3</span>
+</body>
+</html>

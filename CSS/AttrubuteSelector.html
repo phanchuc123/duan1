@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <a href="">click em di</a>
+    <a href="">click em di</a>
+    <a href="" title = "abc pic so">click em di</a>
+    <a href="" title = "pic city so  di">click em di cu</a>
+    <a href="_blank">click em di</a>
+    <p href title = "mx xin toi">Xin chao</p>
+    <p href title = "xin mn">Xin chao</p>
+    <p href title = "so 1">Xin chao</p>
+    <p href title = "pic-city">Xin chao 1</p>
+    <p href title = "pic_city">Xin chao</p>
+    <p href title = "pic123city">Xin chao</p>
+    <p href>Xin chao</p>
+    <style>
+        /* chọn tất cả thẻ có thuộc tính: href */
+        [href]{
+            color: red;
+        }
+        /* chọn thẻ p có thuộc tính href */
+        p[href]{
+            color: blue;
+        }
+        /* chọn tất cả các thuộc tính chính xác giá trị target="_blank" */
+        a[href="_blank"]{
+            color: aqua;
+        }
+        /* chọn tất các thuộc tính có title có chứa từ pic trong giá trị */
+        a[title~="pic"][title~="so"]{
+            background-color: burlywood;
+        }
+        /* chọn tất cả các thẻ có title có từ xin */
+        [title*="xin"]{
+            font-size: 50px;
+        }
+        /* chọn tất cả thuộc tính có title có từ duy nhất bắt đầu bằng pic or pic-city */
+        [title|="pic"]{
+            background-color: brown;
+        }
+        /* title bắt đầu bằng từ pic (không quan tấm space đằng sau) */
+        [title^="pic"]{
+            font-size: 30px;
+        }
+        /* chọn tất cả thẻ có thuộc tính title kết thúc bằng ký tự 1 */
+        [title$="1"]{
+            background-color: red;
+        }
+    </style>
+</body>
+</html>

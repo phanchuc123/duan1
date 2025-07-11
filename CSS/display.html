@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <style>
+        body{
+            width:650px;
+        }
+        /* h2{
+            display:inline;
+        } */
+        a[href]{
+            cursor: pointer;
+            width: 50px;
+            height: 15px;
+            padding: 10px;
+            background-color: aqua;
+            border-radius: 10px;
+            text-decoration: none;
+            display: inline-block;
+            text-align: center;
+        }
+        a[href]:hover{
+            background-color: blueviolet;
+            color: #ee0505;
+        }
+    </style>
+    <!-- display:block (thẻ con chiếm hết phần không gian theo chiều ngang của thẻ cha) -->
+    <h2>Day la khong gian cua h2</h2>
+    <br>
+    <!-- display: inline (hộp chứa nó có kích thước phụ thuộc vào nội dung bên trong nó (ko áp dụng có padding top, bottom)) -->
+    <!-- display: inline-block (là sự kết hợp của inline và block cho phép xét các chiều) -->
+     <a href="https://www.facebook.com/">Click 1</a>
+     <a href="https://www.facebook.com/">Click 2</a>
+</body>
+</html>
